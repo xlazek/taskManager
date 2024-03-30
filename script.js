@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     deleteButton.textContent = 'Splněno';
     deleteButton.addEventListener('click', function() {
       taskItem.remove();
+      completedTasks+=1;
+      updateStats();
     });
 
     taskItem.appendChild(deleteButton);
@@ -47,3 +49,11 @@ document.querySelectorAll(".nav-item").forEach(n =>n.addEventListener("click",
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
  }))
+
+let completedTasks = 0;
+
+function updateStats(){
+  const completedTasksText = document.querySelector("#completedTasksText");
+  completedTasksText.innerText = completedTasks;
+}
+updateStats();

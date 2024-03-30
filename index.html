@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="nav-branding">
+        <h1>Task Manager</h1>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="task-form">
+      <h2>Add New Task</h2>
+      <form id="add-task-form">
+        <label for="task-name">Task Name:</label>
+        <input type="text" id="task-name" name="task-name" required>
+        <label for="task-date">Due Date:</label>
+        <input type="date" id="task-date" name="task-date" required>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section id="task-list">
+      <h2>Task List</h2>
+      <ul id="tasks">
+        <!-- Dynamically populated with JavaScript -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Daniel Lazek. Projekt do porfolia.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
